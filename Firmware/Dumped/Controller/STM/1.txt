@@ -1,0 +1,15 @@
+|-1.dfu
+#Taken from an Pre-Sale CV1 Controller (LY04817062201610) using DefuSe
+#Warning, the pre-sale Nolos do have a different USB Chip then the others, flashing them is still similar
+#Use DefuSe for pre-sale Devices, and GD32 MCU Dfu Tool for all that came later (idk if thats also valid for the Nolo Home)
+
+VID_0483
+PID_5750 #PID_DF11 in DFU Mode
+
+5D7C14593031 # Device Descriptor "iSerialNumber"(Index: 0x03, LANGID: 0x0409)
+
+#Some Version numbers from the Updater Log
+devices type:2
+devices hard:4
+soft main:2
+soft second:5

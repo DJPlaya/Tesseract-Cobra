@@ -1,0 +1,103 @@
+﻿;
+; GDDFUDriver.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=USBDevice
+ClassGuid={36FC9E60-C465-11CF-8056-444553540000}
+Provider=%ManufacturerName%
+CatalogFile=GDDFUDriver.cat
+DriverVer=06/16/2015,14.19.29.953
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+GDDFUDriver.sys  = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTx86
+
+[Standard.NTx86]
+%GDDFUDriver.DeviceDesc%=GDDFUDriver_Device, USB\VID_28E9&PID_0189
+
+[GDDFUDriver_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+GDDFUDriver.sys
+
+[GDDFUDriver_Device.NT.HW]
+AddReg=GDDFUDriver_AddReg
+
+[GDDFUDriver_AddReg]
+; By default, USBDevice class uses iProduct descriptor to name the device in
+; Device Manager on Windows 8 and higher.
+; Uncomment for this device to use %DeviceName% on Windows 8 and higher:
+;HKR,,FriendlyName,,%GDDFUDriver.DeviceDesc%
+
+;-------------- Class definition
+
+[ClassInstall32]
+AddReg = ClassInstall_AddReg
+
+[ClassInstall_AddReg]
+HKR,,,,%ClassName%
+HKR,,NoInstallClass,,1
+HKR,,IconPath,%REG_MULTI_SZ%,"%systemroot%\system32\setupapi.dll,-20"
+HKR,,LowerLogoVersion,,5.2
+
+;-------------- Service installation
+[GDDFUDriver_Device.NT.Services]
+AddService = GDDFUDriver,%SPSVCINST_ASSOCSERVICE%, GDDFUDriver_Service_Inst
+
+; -------------- GDDFUDriver driver install sections
+[GDDFUDriver_Service_Inst]
+DisplayName    = %GDDFUDriver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\GDDFUDriver.sys
+LoadOrderGroup = Extended Base
+
+;
+;--- GDDFUDriver_Device Coinstaller installation ------
+;
+
+[DestinationDirs]
+GDDFUDriver_Device_CoInstaller_CopyFiles = 11
+
+[GDDFUDriver_Device.NT.CoInstallers]
+AddReg=GDDFUDriver_Device_CoInstaller_AddReg
+CopyFiles=GDDFUDriver_Device_CoInstaller_CopyFiles
+
+[GDDFUDriver_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[GDDFUDriver_Device_CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[SourceDisksFiles]
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+[GDDFUDriver_Device.NT.Wdf]
+KmdfService =  GDDFUDriver, GDDFUDriver_wdfsect
+[GDDFUDriver_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="GigaDevice"
+ClassName="Universal Serial Bus devices"
+DiskName = "GD Driver 2.0 Installation Disk"
+GDDFUDriver.DeviceDesc = "GD32 Device in DFU Mode"
+GDDFUDriver.SVCDESC = "USB Driver for GD device v2.0"
+REG_MULTI_SZ = 0x00010000
