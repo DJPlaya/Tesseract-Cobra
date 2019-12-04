@@ -1,0 +1,24 @@
+#This File is supposed to contain Hardware identifiers so you can recognise the Hardware without the need to know the Serial.
+#Valid Values are the Product Series (Type), Serial Number(Serial), Vendor ID(VID), Product ID(PID), the USB Controller Chip(Chip) and the DFU Product ID(DFU) which only exists if the Device is in DFU Mode
+
+|-Product Types
+ |-CV1 Pre-Sale
+  |Serial: Beginns with "LY"
+  |Chip: STM32 // STM32F042 - Unconfirmed
+  
+ |-CV1
+  |Serial: Data Needed
+  |Chip: GD32 // Unconfirmed
+  
+ |-Home
+  |Serial: Data Needed
+  |Chip: Data Needed
+
+
+#From here on we do list specific Hardware Scans, do no add Scans that have the Same Data 
+|-Controller
+ |Type: CV1 Pre-Sale
+ |Serial: LY04817062201610
+ |VID: 0483
+ -|PID: 5750
+  |DFU: PID_DF11
