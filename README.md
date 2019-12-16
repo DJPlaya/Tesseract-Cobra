@@ -29,5 +29,10 @@ Its also our Target to make this Process as simple as possible, and to avoid bri
    B: For GD32, click on "open" in the "Download APP program file" Section(https://i.imgur.com/1ANDMG1.png). In the Lower right, select "BIN Files"(https://i.imgur.com/dLXJNxa.png). Navigate to the previously downloaded Firmware and select it. Click "OK" in the lower right to start the flashing Procedure, do not disconnect the Device now!  
 
 #
+|-Enter Recovery(DFU) Mode
+ |Controller![Controller](https://i.imgur.com/K9PpHPU.png)
+ |HMD![HMD](https://i.imgur.com/EaKsvZ2.png)
+ |Base Station![Base Station](https://i.imgur.com/m1mjzlT.png)
+#
 |-Device LED Status Codes  
 ![Device LED Status Codes](https://i.imgur.com/YZ58YsV.png)
