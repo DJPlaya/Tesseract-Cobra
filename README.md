@@ -1,9 +1,18 @@
 # Tesseract-Cobra
 ### Warning, i am not responsible if you do Brick your Device and make it unusable.
+### This Project is a Collection of Tools, Firmware and Information and wasent authorized by LYRobotix/NOLO Co., Ltd.
 ### Please read all Instructions carefully.
 
 Goal of this Project is to help Users of Nolo Hardware to flash their Hardware manually and without the usage of the Updaters.
 Its also our Target to make this Process as simple as possible, and to avoid bricking Hardware.
+#
+
+|-Warnings
+- Do not manually flash your Device if you feel insecure about it or may not have the required Knowledge
+- If you make changes on the Driver or Device Settings and Windows asks you to restart - Do so, flashing your Device before restarting may end up in an Bluescreen and with that in a possible brick of your Device
+- Be absolutly sure you do use the correct Firmware, only use Files from "/Firmware/Official/"
+- If you have any further Questions, create an Issue or ask support@nolovr.com
+
 #
 |-Flashing Manually
 1. Lookup "Hardware Identifiers.txt" to find out your Hardware Model  
