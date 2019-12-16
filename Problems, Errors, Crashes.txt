@@ -4,7 +4,7 @@
  |Device LED stays dark even when holding the Power Button or Charging - The Main Firmware is damaged, enter Recovery Mode and flash manually
  |Device wont turn into Recovery Mode - The wrong Firmware is flashed
  |The Device turns on and off - Either the Driver is installed inproperly or the Battery is empty, try to reinstall the Driver and charge your Controller or Base Station
- |The Device turns on and off once in Recovery mode - Either the Driver is installed inproperly or the Firmware on the Device is damaged. If reinstalling the Driver does not help, hold down the Recovery Mode Keys and flash the Firmware manually before it restarts again
+ |The Device turns on and off once in Recovery mode - This mostly indicates an Problem with the DFU Mode on the Device or the Firmware. Hold down the Recovery Mode Key(s) and flash the Firmware manually before it restarts again. Be careful since this can cause a Bluescreen
  |Device wont pair - Maybe the Firmware across the Devices is different, bring all of them to a similar Version
 
  -|Problems with Error-codes/strings
@@ -12,4 +12,4 @@
 
 
 |-Crashes
- |ST32 - PAGE_FAULT_IN_NONPAGED_AREA caused by STTub30.sys - If you do make changes on the Driver or change Stuff in the Device Manager on an Nolo Device, you may be prompted to restart your Computer. If you do not do so and do Stuff like upgrading the Device, your Computer may Crash.
+ |ST32 - PAGE_FAULT_IN_NONPAGED_AREA caused by STTub30.sys - This can happen when the DFU Mode is in "Error" State

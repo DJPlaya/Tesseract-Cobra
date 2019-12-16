@@ -9,7 +9,6 @@ Its also our Target to make this Process as simple as possible, and to avoid bri
 
 |-Warnings
 - Do not manually flash your Device if you feel insecure about it or may not have the required Knowledge
-- If you make changes on the Driver or Device Settings and Windows asks you to restart - Do so, flashing your Device before restarting may end up in an Bluescreen and with that in a possible brick of your Device
 - Be absolutly sure you do use the correct Firmware, only use Files from "/Firmware/Official/"
 - If you have any further Questions, create an Issue or ask support@nolovr.com
 
