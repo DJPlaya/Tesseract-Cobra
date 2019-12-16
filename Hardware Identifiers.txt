@@ -5,11 +5,15 @@
  |-CV1 Pre-Sale
   |Serial: Beginns with "LY"
   |Chip: STM32 // STM32F042 - Unconfirmed
-  
+
  |-CV1
   |Serial: Data Needed
   |Chip: GD32 // Unconfirmed
-  
+
+ |- CV1 Air
+  |Serial: Data Needed
+  |Chip: Data Needed
+
  |-Home
   |Serial: Data Needed
   |Chip: Data Needed
