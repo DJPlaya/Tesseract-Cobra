@@ -1,4 +1,6 @@
-|-Reconver mode Methode
+#Even doe the Recovery Mode isent the same as the DFU-Mode, there is no significant different i could notice.
+
+|-Recovery Mode Methode
 ### Allways press the Button(s) first before connecting USB  
 #
 Controller  
