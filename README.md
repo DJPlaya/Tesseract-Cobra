@@ -16,8 +16,7 @@ Its also our Target to make this Process as simple as possible, and to avoid bri
 |-Flashing Manually
 1. Lookup "Hardware Identifiers.txt" to find out your Hardware Model  
 2. Go to "/Drivers" and Install the ST32 Driver for CV1 Pre-Sale Devices or the GD32 Driver for regular CV1 Devices (idk about Nolo Home yet, propably its GD32)  
-3. A: Bring your Device into DFU Mode by pressing the right Buttons at the right Time as shown in the Nolo Updater, the LED should be flashing Orange  
-3. B: If you do not have Succes with Methode A, do try to bring your Device into DFU Mode by using the Nolo Firmware Updater  
+3. Bring your Device into DFU Mode, Information on how todo can be found in "Enter Recovery and DFU-Mode.md"
 4. Go to "/Tools" and go to "DfuSe" for flashing CV1 Pre-Sale Devices and "GD32" for regular CV1 Devices (idk about Nolo Home yet, propably its GD32)  
 5. A: For DfuSe, open up "/Bin/DfuSeDemo.exe"  
    B: For GD32, Open up "GD32 MCU Dfu Tool.exe"  
