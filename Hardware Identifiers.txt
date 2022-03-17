@@ -10,14 +10,17 @@
   |Serial: Data Needed
   |Chip: GD32 // Unconfirmed
 
- |- CV1 Air
+ |-CV1 Air
   |Serial: Data Needed
   |Chip: Data Needed
 
  |-Home
   |Serial: Data Needed
   |Chip: Data Needed
-
+  
+ |-CV1 Pro
+  |Serial: Data Needed
+  |Chip: Data GD32 // GD32F3XX
 
 #From here on we do list specific Hardware Scans, do no add Scans that have the Same Data 
 |-Controller
